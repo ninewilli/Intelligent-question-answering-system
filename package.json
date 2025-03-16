@@ -1,0 +1,33 @@
+{
+  "name": "demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "axios": "^1.6.7",
+    "compass-mixins": "^0.12.12",
+    "core-js": "^3.8.3",
+    "echarts": "^5.5.0",
+    "echarts-wordcloud": "^2.1.0",
+    "font-awesome": "^4.7.0",
+    "scss": "^0.2.4",
+    "scss-loader": "^0.0.1",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3",
+    "wiki": "^0.35.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^14.1.1"
+  }
+}

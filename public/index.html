@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <script src="../js/particles.min.js"></script>
+    <script src="../js/flexible.js"></script>
+    <script src="../js/pace.min.js"></script>
+    <script src="../js/jquery-2.2.4.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/nifty.min.js"></script>
+    <script src="../js/icons.js"></script>
+    <script src="../js/echarts.min.js"></script>
+    <script src="../js/nifty-demo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="../js/litewebchat_input.min.js"></script><!-- 抽离的聊天信息组件 -->
+    <script src="../js/litewebchat_render.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/user.js"></script>
+    <script src="../js/layer/layer.js"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript">
+        function chick_up(num){
+            var s_1 = '#zhan'
+            var s_2 = '#chai'
+            $(s_1).removeClass('fa fa-thumbs-up').addClass('fa fa-thumbs-o-up');
+            $(s_2).removeClass('fa fa-thumbs-o-down').addClass('fa fa-thumbs-down');
+        }
+        function chick_down(num){
+            var s_1 = '#zhan'
+            var s_2 = '#chai'
+            $(s_1).removeClass('fa fa-thumbs-o-up').addClass('fa fa-thumbs-up');
+            $(s_2).removeClass('fa fa-thumbs-down').addClass('fa fa-thumbs-o-down');
+        }
+        function chick_up_w(){
+            var s_1 = '#zhan'
+            var s_2 = '#chai'
+            $(s_1).removeClass('fa fa-thumbs-up').addClass('fa fa-thumbs-o-up');
+            $(s_2).removeClass('fa fa-thumbs-o-down').addClass('fa fa-thumbs-down');
+        }
+        function chick_down_w(){
+            var s_1 = '#zhan'
+            var s_2 = '#chai'
+            $(s_1).removeClass('fa fa-thumbs-o-up').addClass('fa fa-thumbs-up');
+            $(s_2).removeClass('fa fa-thumbs-down').addClass('fa fa-thumbs-o-down');
+        }
+      var test = 0;
+      //点击改变书签的激活情况
+      function change_tabs(elem){
+          if(elem.className=="tabs__tab--inactive"){//如果当前书签未激活
+              //获取已激活的书签
+              if(test == 0){
+                  $('#speak').removeClass('show').addClass('style');
+                  $('.lite-chatinput').removeClass('show').addClass('style');
+                  $('.row').removeClass('style').addClass('show');
+                  $('.rows').removeClass('style').addClass('show');
+                  $('#ts').removeClass('show').addClass('style');
+                  $('#tts').removeClass('style').addClass('show');
+                  $('.row1').removeClass('show').addClass('style');
+                  test = 1;
+              }
+              else{
+                  $('.lite-chatinput').removeClass('style').addClass('show');
+                  $('.row').removeClass('show').addClass('style');
+                  $('#speak').removeClass('style').addClass('show');
+                  $('#ts').removeClass('style').addClass('show');
+                  $('.rows').removeClass('show').addClass('style');
+                  $('#tts').removeClass('show').addClass('style');
+                  $('.row1').removeClass('style').addClass('show');
+                  test = 0;
+              }
+              var act_tabs=document.getElementsByClassName("tabs__tab--active");
+              
+              //将已激活的书签变为未激活
+              for(var i = 0; i < act_tabs.length; i++) {
+                  act_tabs[i].className = "tabs__tab--inactive";
+              }
+              
+              //激活当前的书签
+              elem.className="tabs__tab--active";
+          }
+      }
+      function change_dan(){
+          $('.send').removeClass('style').addClass('show');
+          $('.sends').removeClass('show').addClass('style');
+      }
+      function change_duo(){
+          $('.sends').removeClass('style').addClass('show');
+          $('.send').removeClass('show').addClass('style');
+      }
+      function search_1(){
+          $('.container__content_1').removeClass('style').addClass('show');
+          $('.container__content_2').removeClass('show').addClass('style');
+          $('.container__content_3').removeClass('show').addClass('style');
+          $('.container__content_4').removeClass('show').addClass('style');
+          $('.container__content_5').removeClass('show').addClass('style');
+          $('.container__content_6').removeClass('show').addClass('style');
+      }
+      function search_2(){
+          $('.container__content_2').removeClass('style').addClass('show');
+          $('.container__content_1').removeClass('show').addClass('style');
+          $('.container__content_3').removeClass('show').addClass('style');
+          $('.container__content_4').removeClass('show').addClass('style');
+          $('.container__content_5').removeClass('show').addClass('style');
+          $('.container__content_6').removeClass('show').addClass('style');
+      }
+      function search_3(){
+          $('.container__content_3').removeClass('style').addClass('show');
+          $('.container__content_2').removeClass('show').addClass('style');
+          $('.container__content_1').removeClass('show').addClass('style');
+          $('.container__content_4').removeClass('show').addClass('style');
+          $('.container__content_5').removeClass('show').addClass('style');
+          $('.container__content_6').removeClass('show').addClass('style');
+      }
+      function search_4(){
+          $('.container__content_4').removeClass('style').addClass('show');
+          $('.container__content_2').removeClass('show').addClass('style');
+          $('.container__content_3').removeClass('show').addClass('style');
+          $('.container__content_1').removeClass('show').addClass('style');
+          $('.container__content_5').removeClass('show').addClass('style');
+          $('.container__content_6').removeClass('show').addClass('style');
+      }
+      function search_5(){
+          $('.container__content_5').removeClass('style').addClass('show');
+          $('.container__content_2').removeClass('show').addClass('style');
+          $('.container__content_3').removeClass('show').addClass('style');
+          $('.container__content_4').removeClass('show').addClass('style');
+          $('.container__content_1').removeClass('show').addClass('style');
+          $('.container__content_6').removeClass('show').addClass('style');
+      }
+      function search_6(){
+          $('.container__content_6').removeClass('style').addClass('show');
+          $('.container__content_2').removeClass('show').addClass('style');
+          $('.container__content_3').removeClass('show').addClass('style');
+          $('.container__content_4').removeClass('show').addClass('style');
+          $('.container__content_5').removeClass('show').addClass('style');
+          $('.container__content_1').removeClass('show').addClass('style');
+      }
+      
+  </script>
+  </body>
+</html>
